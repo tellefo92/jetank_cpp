@@ -15,7 +15,6 @@ struct ServoData
 {
     int16_t current_angle;
     int16_t current_speed;
-    bool success;
 };
 
 class Servos
@@ -187,7 +186,7 @@ public:
     //Read result
     std::vector<uint8_t> rxpacket;
     ServoData servo_data;
-    servo_data.success = false;
+    //servo_data.success = false;
     int result;
 
     auto timeout = std::chrono::steady_clock::now() 
